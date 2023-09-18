@@ -1,16 +1,27 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import jwtDecode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
+  //#BehaviorSubject >> ashan 2ader a3ml 3la var nafso subscribe
+  userData:BehaviorSubject<any>=new BehaviorSubject('')
+
+
   constructor(private _http:HttpClient) {  }
 
   getUserData(){
-    let encodedToken=localStorage.getItem('userToken');
+    let encodedToken=JSON.stringify(localStorage.getItem('userToken'));
+    let encoded=jwtDecode(encodedToken)
+
+    console.log(encoded);
+
+    this.userData.next(encoded)
+    
   
    
   }

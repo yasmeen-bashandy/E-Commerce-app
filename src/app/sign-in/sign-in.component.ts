@@ -39,6 +39,7 @@ export class SignInComponent {
           console.log(data);
           this.isLoading=false;
           localStorage.setItem("userToken",data.token)
+          this._authService.getUserData()
           this._router.navigate(['/home'])
           
         },
