@@ -1,3 +1,4 @@
+import { TmplAstHoverDeferredTrigger } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { AuthService } from 'src/core/services/auth.service';
 
@@ -18,9 +19,20 @@ export class NavbarComponent {
 
     this._authService.userData.subscribe((res)=>{
       console.log(res);
+      if ( this._authService.userData.getValue()) {
+        this.isLoggedIn=true
+        
+      }else{
+        this.isLoggedIn=false
+      }
       
     })
 
+  }
+
+  logOut(){
+    this._authService.logOut()
+    this.isLoggedIn=false
   }
 
 }

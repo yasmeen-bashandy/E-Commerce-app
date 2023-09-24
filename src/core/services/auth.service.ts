@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import jwtDecode from 'jwt-decode';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,12 @@ export class AuthService {
   userData:BehaviorSubject<any>=new BehaviorSubject('')
 
 
-  constructor(private _http:HttpClient) {  }
+  constructor(private _http:HttpClient,private __router:Router) { 
+    if (localStorage.getItem("userToken")) {
+      this.getUserData()
+      
+    }
+   }
 
   getUserData(){
     let encodedToken=JSON.stringify(localStorage.getItem('userToken'));
@@ -34,6 +40,11 @@ export class AuthService {
     }
 
 
+    logOut(){
+      localStorage.removeItem("userToken")
+      this.__router.navigate(['/login'])
+
+    }
 
 
 
