@@ -13,7 +13,7 @@ export class AuthService {
   userData:BehaviorSubject<any>=new BehaviorSubject('')
 
 
-  constructor(private _http:HttpClient,private __router:Router) { 
+  constructor(private _http:HttpClient,private _router:Router) { 
     if (localStorage.getItem("userToken")) {
       this.getUserData()
       
@@ -42,7 +42,7 @@ export class AuthService {
 
     logOut(){
       localStorage.removeItem("userToken")
-      this.__router.navigate(['/login'])
+      this._router.navigate(['/login'])
 
     }
 
