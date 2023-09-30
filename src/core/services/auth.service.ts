@@ -46,6 +46,13 @@ export class AuthService {
 
     }
 
+    navHome(){
+      if (localStorage.getItem("userToken")!=null) {
+        this._router.navigate(['/home'])
+        
+      }
+    }
+
 
 
  

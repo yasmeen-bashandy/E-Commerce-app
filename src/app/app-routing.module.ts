@@ -9,15 +9,16 @@ import { CategoriesComponent } from './categories/categories.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
-  {path:"home",component:HomeComponent},
-  {path:"about",component:AboutComponent},
-  {path:"cart",component:CartComponent},
-  {path:"products",component:ProductsComponent},
-  {path:"brands",component:BrandComponent},
-  {path:"categories",component:CategoriesComponent},
+  {path:"home",canActivate:[AuthGuard],component:HomeComponent},
+  {path:"about",canActivate:[AuthGuard],component:AboutComponent},
+  {path:"cart",canActivate:[AuthGuard],component:CartComponent},
+  {path:"products",canActivate:[AuthGuard],component:ProductsComponent},
+  {path:"brands",canActivate:[AuthGuard],component:BrandComponent},
+  {path:"categories",canActivate:[AuthGuard],component:CategoriesComponent},
 
   {path:"signup",component:SignUpComponent},
   {path:"login",component:SignInComponent},
