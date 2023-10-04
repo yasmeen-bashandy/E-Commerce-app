@@ -1,1 +1,15 @@
-<p>product-item works!</p>
+<div class="product px-2 py-4">
+    <img [src]="Product.imageCover" class="w-100" alt="">
+    <p class="text-main">{{Product.category.name}}</p>
+    <h2 class="h6">{{Product.title.split(" ").slice(0, 2).join(" ")}}</h2>
+    <div class="d-flex justify-content-between">
+        <span>{{Product.price}} EGP</span>
+        <div>
+            <i class="fa fa-star rating-color"></i>
+            {{Product.ratingsAverage}}
+        </div>
+    </div>
+
+    <button class="btn bg-main d-block w-100">+ Add</button>
+
+</div>

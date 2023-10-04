@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from 'src/core/interface/product';
+
 
 @Component({
   selector: 'app-product-item',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class ProductItemComponent {
 
-}
+  @Input() Product:Product={} as Product;
+   
+  }
+
+
