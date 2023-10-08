@@ -8,8 +8,13 @@ import { Observable } from 'rxjs';
 export class ProductsService {
 
   constructor(private _httpClient:HttpClient) {}
+
   getProducts():Observable<any>{
     return this._httpClient.get("https://ecommerce.routemisr.com/api/v1/products")
+  }
+
+  getProductById(id:string):Observable<any>{
+    return this._httpClient.get(`https://ecommerce.routemisr.com/api/v1/products/${id}`)
   }
   
 }

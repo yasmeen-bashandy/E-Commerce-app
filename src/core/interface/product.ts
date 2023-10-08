@@ -4,7 +4,9 @@ export interface Product {
     title:string,
     category:category,
     ratingsAverage:number,
-    id:string
+    id:string,
+    description?:string,
+    images?:string[]
 }
 
 interface category{
