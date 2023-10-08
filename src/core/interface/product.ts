@@ -3,7 +3,8 @@ export interface Product {
     price:number,
     title:string,
     category:category,
-    ratingsAverage:number
+    ratingsAverage:number,
+    id:string
 }
 
 interface category{

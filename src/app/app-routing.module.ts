@@ -10,6 +10,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthGuard } from './auth.guard';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path:"products",canActivate:[AuthGuard],component:ProductsComponent},
   {path:"brands",canActivate:[AuthGuard],component:BrandComponent},
   {path:"categories",canActivate:[AuthGuard],component:CategoriesComponent},
+  {path:"productDetails/:id",canActivate:[AuthGuard],component:ProductDetailsComponent},
+
 
   {path:"signup",component:SignUpComponent},
   {path:"login",component:SignInComponent},
