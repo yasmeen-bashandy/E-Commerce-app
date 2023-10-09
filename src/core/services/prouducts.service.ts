@@ -13,7 +13,7 @@ export class ProductsService {
     return this._httpClient.get("https://ecommerce.routemisr.com/api/v1/products")
   }
   getCategories():Observable<any>{
-    return this._httpClient.get("https://ecommerce.routemisr.com/api/v1/products")
+    return this._httpClient.get("https://ecommerce.routemisr.com/api/v1/categories")
   }
 
 
