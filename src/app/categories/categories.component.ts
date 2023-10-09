@@ -20,7 +20,7 @@ export class CategoriesComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 8
+        items: 5
       },
      
     },
