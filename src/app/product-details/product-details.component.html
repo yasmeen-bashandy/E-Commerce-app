@@ -15,7 +15,7 @@
             <h2>{{productDetails.title | uppercase}}</h2>
             <p class="text-muted">{{productDetails.description}}</p>
             <div class="d-flex justify-content-between">
-                <span>{{productDetails.price | currency : 'EUR'}} EGP</span>
+                <span>{{productDetails.price |concat :'Total Price : ' }} </span>
                 <div>
                     <i class="fa fa-star rating-color"></i>
                     {{productDetails.ratingsAverage}}

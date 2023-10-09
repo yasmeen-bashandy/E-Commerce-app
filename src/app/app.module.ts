@@ -22,6 +22,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainSliderComponent } from './main-slider/main-slider.component';
+import { ConcatPipe } from './concat.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import { MainSliderComponent } from './main-slider/main-slider.component';
     FeaturedProductsComponent,
     ProductItemComponent,
     ProductDetailsComponent,
-    MainSliderComponent
+    MainSliderComponent,
+    ConcatPipe,
+    
   ],
   imports: [
     BrowserModule,
