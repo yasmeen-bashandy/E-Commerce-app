@@ -12,10 +12,10 @@
               </owl-carousel-o>
         </div>
         <div class="col-md-8">
-            <h2>{{productDetails.title}}</h2>
+            <h2>{{productDetails.title | uppercase}}</h2>
             <p class="text-muted">{{productDetails.description}}</p>
             <div class="d-flex justify-content-between">
-                <span>{{productDetails.price}} EGP</span>
+                <span>{{productDetails.price | currency : 'EUR'}} EGP</span>
                 <div>
                     <i class="fa fa-star rating-color"></i>
                     {{productDetails.ratingsAverage}}
