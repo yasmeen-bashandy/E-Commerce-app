@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from 'src/core/services/prouducts.service';
 
-import { OwlOptions } from 'ngx-owl-carousel-o';
+
 import { Category } from 'src/core/interface/category';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-categories',
@@ -22,7 +23,7 @@ export class CategoriesComponent implements OnInit {
       0: {
         items: 5
       },
-     
+
     },
     nav: true
   }

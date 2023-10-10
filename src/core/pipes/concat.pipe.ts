@@ -5,7 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ConcatPipe implements PipeTransform {
 
-  transform(value: number ,keyWord:string): string {
+ 
+  transform(value:number,keyWord:string ): string {
     return keyWord + value ;
   }
 

@@ -2,9 +2,9 @@
     <a [routerLink]="['/productDetails',Product.id]">
         <img [src]="Product.imageCover" class="w-100" alt="">
         <p class="text-main">{{Product.category.name}}</p>
-        <h2 class="h6" >{{Product.title.split(" ").slice(0, 2).join(" ") | uppercase}}</h2>
+        <h2 class="h6" >{{Product.title.split(" ").slice(0, 2).join(" ") }}</h2>
         <div class="d-flex justify-content-between">
-            <span>{{Product.price |concat :'Total : '}} EGP</span>
+            <span>{{Product.price |concat : "Price : "}} EGY</span>
             <div>
                 <i class="fa fa-star rating-color"></i>
                 {{Product.ratingsAverage}}
