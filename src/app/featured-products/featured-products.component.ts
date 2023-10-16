@@ -9,7 +9,8 @@ import { ProductsService } from 'src/core/services/prouducts.service';
   styleUrls: ['./featured-products.component.css']
 })
 export class FeaturedProductsComponent implements OnInit {
-  allProduct:Product[]=[]
+  allProduct:Product[]=[];
+  searchTerm:string=''
 
   constructor(private _productsService:ProductsService){
 

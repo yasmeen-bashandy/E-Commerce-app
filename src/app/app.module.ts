@@ -14,7 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductsComponent } from './products/products.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FeaturedProductsComponent } from './featured-products/featured-products.component';
 import { ProductItemComponent } from './product-item/product-item.component';
@@ -23,7 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainSliderComponent } from './main-slider/main-slider.component';
 import { ConcatPipe } from 'src/core/pipes/concat.pipe';
-
+import { SearchProductPipe } from 'src/core/pipes/search-product.pipe'; 
 
 @NgModule({
   declarations: [
@@ -43,7 +43,9 @@ import { ConcatPipe } from 'src/core/pipes/concat.pipe';
     ProductItemComponent,
     ProductDetailsComponent,
     MainSliderComponent,
-    ConcatPipe
+    ConcatPipe,
+    SearchProductPipe
+    
    
     
   ],
@@ -53,7 +55,8 @@ import { ConcatPipe } from 'src/core/pipes/concat.pipe';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    FormsModule
     
   ],
   providers: [],
