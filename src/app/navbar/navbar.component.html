@@ -44,6 +44,9 @@
           <li (click)="logOut()" class="nav-item text-capitalize " *ngIf="isLoggedIn">
             <a  class="nav-link cursor-pointer " aria-current="page">logOut</a>
           </li>
+          <li  class="nav-item text-capitalize " *ngIf="isLoggedIn">
+            <a  class="nav-link cursor-pointer " aria-current="page" routerLink="/setting">Setting</a>
+          </li>
         </ul>
 
        

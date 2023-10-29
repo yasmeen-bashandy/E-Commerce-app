@@ -11,6 +11,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AuthGuard } from './auth.guard';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SettingModule } from './setting/setting.module';
 
 const routes: Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
@@ -25,6 +26,8 @@ const routes: Routes = [
 
   {path:"signup",component:SignUpComponent},
   {path:"login",component:SignInComponent},
+  {path:"setting",loadChildren:()=>import('./setting/setting.module').then((m)=>m.SettingModule)},
+
 
   {path:"**",component:NotFoundComponent}
 ];
