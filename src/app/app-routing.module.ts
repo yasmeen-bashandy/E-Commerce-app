@@ -17,7 +17,6 @@ const routes: Routes = [
   {path:"",redirectTo:"home",pathMatch:"full"},
   {path:"home",canActivate:[AuthGuard],component:HomeComponent},
   {path:"about",canActivate:[AuthGuard],component:AboutComponent},
-  {path:"cart",canActivate:[AuthGuard],component:CartComponent},
   {path:"products",canActivate:[AuthGuard],component:ProductsComponent},
   {path:"brands",canActivate:[AuthGuard],component:BrandComponent},
   {path:"categories",canActivate:[AuthGuard],component:CategoriesComponent},
@@ -26,7 +25,8 @@ const routes: Routes = [
 
   {path:"signup",component:SignUpComponent},
   {path:"login",component:SignInComponent},
-  {path:"setting",loadChildren:()=>import('./setting/setting.module').then((m)=>m.SettingModule)},
+  {path:"setting",loadChildren:()=>import('./setting/setting.module').then(m=>m.SettingModule)},
+  {path:"cart",loadChildren:()=>import('./cart/cart.module').then(m=>m.CartModule)},
 
 
   {path:"**",component:NotFoundComponent}

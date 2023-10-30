@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { BrandComponent } from './brand/brand.component';
-import { CartComponent } from './cart/cart.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -30,7 +29,7 @@ import { SearchProductPipe } from 'src/core/pipes/search-product.pipe';
     AppComponent,
     AboutComponent,
     BrandComponent,
-    CartComponent,
+  
     CategoriesComponent,
     FooterComponent,
     HomeComponent,
