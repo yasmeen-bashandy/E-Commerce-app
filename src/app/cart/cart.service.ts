@@ -7,9 +7,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  token:string=JSON.stringify(localStorage.getItem("userToken"))
+  token:string | null=''
 
-  constructor(private _httpClient:HttpClient) { }
+  constructor(private _httpClient:HttpClient) { 
+    console.log(localStorage.getItem("userToken"));
+    
+    this.token=localStorage.getItem("userToken")
+  }
 
 
   addToCart(x:string):Observable<any>{
@@ -17,7 +21,7 @@ export class CartService {
     {productId:x},
     {
       headers:{
-        token:this.token
+        token:`${this.token}`
       }
         
     }
