@@ -23,13 +23,14 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MainSliderComponent } from './main-slider/main-slider.component';
 import { ConcatPipe } from 'src/core/pipes/concat.pipe';
 import { SearchProductPipe } from 'src/core/pipes/search-product.pipe'; 
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     BrandComponent,
-  
+   CartComponent,
     CategoriesComponent,
     FooterComponent,
     HomeComponent,
