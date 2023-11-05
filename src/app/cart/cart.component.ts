@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from './cart.service';
+import { Cart } from './../../core/interface/cart';
 
 @Component({
   selector: 'app-cart',
@@ -7,6 +8,8 @@ import { CartService } from './cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit{
+
+  cartDetails:Cart= {} as  Cart
   constructor(private _cartService:CartService){
 
   }
@@ -18,7 +21,11 @@ export class CartComponent implements OnInit{
 
   getCart(){
     this._cartService.getCart().subscribe({
-      next:(res)=>console.log(res),
+      next:(res)=>{
+        this.cartDetails=res;
+        // console.log( this.cartDetails);
+        
+      },
       error:(err)=>console.log(err)
   
     })
