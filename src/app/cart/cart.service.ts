@@ -20,7 +20,7 @@ export class CartService {
     {productId:x},
     {
       headers:{
-        token:`$this.token`
+        token:`${this.token}`
       }
     })
   }
