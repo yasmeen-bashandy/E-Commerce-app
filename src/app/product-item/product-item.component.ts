@@ -1,5 +1,7 @@
+
 import { Component, Input } from '@angular/core';
 import { Product } from 'src/core/interface/product';
+import { CartService } from '../cart/cart.service';
 
 
 
@@ -12,11 +14,19 @@ export class ProductItemComponent {
 
   @Input() Product:Product={} as Product;
 
-  constructor() {
+  constructor(private _cartService:CartService) {
     
   }
 
-   
+  addProduct(id:string){
+    this._cartService.addToCart(id).subscribe({
+      next:(res)=>{console.log(res)},
+      error:(err)=>{console.log(err);
+      }
+  
+      }
+   )}
+
   }
 
 
