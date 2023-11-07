@@ -24,6 +24,15 @@ export class CartService {
       }
     })
   }
+  getCart():Observable<any>{
+    return this._httpClient.get('https://ecommerce.routemisr.com/api/v1/cart',
+
+    {
+      headers:{
+        token:`${this.token}`
+      }
+    })
+  }
 }
 
 
