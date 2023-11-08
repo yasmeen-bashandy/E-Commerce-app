@@ -18,7 +18,7 @@ interface Products{
 }
 
 interface ProductDetails{
-    id:number,
+    id:string,
     title:string,
     imageCover:string
 }

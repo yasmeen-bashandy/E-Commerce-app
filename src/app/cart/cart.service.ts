@@ -33,6 +33,16 @@ export class CartService {
       }
     })
   }
+  updateCart(productId:string, x:number):Observable<any>{
+    return this._httpClient.put(`https://ecommerce.routemisr.com/api/v1/cart/${{productId}}`,
+    {count:x},
+
+    {
+      headers:{
+        token:`${this.token}`
+      }
+    })
+  }
 }
 
 

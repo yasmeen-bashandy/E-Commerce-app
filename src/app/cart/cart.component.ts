@@ -29,4 +29,17 @@ export class CartComponent implements OnInit{
       error:(err)=>console.log(err)
       }
    )
-} }
+}
+updateCart(id:string,count:number){
+  this._cartService.updateCart(id,count).subscribe({
+    next:(res)=>{
+      this.cartDetails=res
+    },
+    error:(err)=>console.log(err)
+    
+    
+  })
+
+}
+
+}
